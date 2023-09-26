@@ -632,6 +632,7 @@ svg {
   opacity: 1;
   transition: transform 300ms cubic-bezier(0.59, -0.21, 0, 1.48) 200ms,
     opacity 300ms cubic-bezier(0.59, -0.21, 0, 1.48) 200ms;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -667,4 +668,120 @@ svg {
 
 .modal-btn-icon {
   color: currentColor;
+}
+
+.modal-caption {
+  display: block;
+  width: 360px;
+  margin-bottom: 24px;
+  color: var(--navy-blue);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.modal-caption-accent {
+  color: var(--accent-cl);
+}
+
+.modal-form {
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--light-slate);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.modal-field {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding: 11px 38px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--navy-blue-modal);
+  border-radius: 4px;
+  border: 1px solid var(--navy-blue-modal);
+  outline: transparent;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  fill: var(--navy-blue);
+}
+
+.modal-coment {
+  margin-bottom: 16px;
+}
+
+.modal-coment-field {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  border-radius: 4px;
+  border: 1px solid var(--navy-blue-modal);
+  outline: transparent;
+  resize: none;
+}
+
+.modal-coment-field::placeholder {
+  color: var(--navy-blue-modal);
+}
+
+.modal-agreement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  color: var(--light-slate);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.modal-agreement-input {
+}
+
+.modal-checkbox {
+}
+
+.modal-checkbox-icon {
+}
+
+.modal-agreement-link {
+  margin-left: 4px;
+  color: var(--iris);
+  text-decoration: underline;
+}
+
+.modal-button-send {
+  margin-left: 119px;
+  padding: 16px 32px;
+  color: var(--white);
+  background-color: var(--iris);
+  border: transparent;
+  border-radius: 4px;
 }
