@@ -622,9 +622,6 @@ svg {
   color: var(--cloud);
 }
 
-.subscribe-container {
-}
-
 .subscribe-caption {
   margin-bottom: 16px;
 
@@ -810,6 +807,13 @@ svg {
   border-radius: 4px;
   border: 1px solid var(--navy-blue-modal);
   outline: transparent;
+
+  transition: border-color var(--trns-fast);
+}
+
+.modal-input:focus-within,
+.modal-coment-field:focus-within {
+  border-color: var(--iris);
 }
 
 .modal-icon {
@@ -819,6 +823,12 @@ svg {
   transform: translateY(-50%);
 
   fill: var(--navy-blue);
+
+  transition: fill var(--trns-fast);
+}
+
+.modal-input:focus-within + .modal-icon {
+  fill: var(--iris);
 }
 
 .modal-coment {
