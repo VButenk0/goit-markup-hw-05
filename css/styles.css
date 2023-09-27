@@ -107,6 +107,12 @@ svg {
 
 .header {
   border-bottom: 1px solid var(--cornflower);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  z-index: var(--idx-header);
 }
 
 .header-container {
@@ -143,13 +149,14 @@ svg {
 
 .header-list-link {
   position: relative;
+  display: block;
+  padding: 24px 0;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
-  padding: 24px 0;
-  display: block;
 
   transition: color var(--trns-fast);
 }
@@ -528,7 +535,7 @@ svg {
 }
 
 .footer-text-container {
-  width: 264px;
+  min-width: 264px;
   margin-right: 120px;
 }
 
@@ -564,14 +571,15 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-right: 80px;
 }
 
 .footer-socials-title {
   color: var(--white);
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5px;
-  letter-spacing: 0.2px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   height: 24px;
 }
 
@@ -598,6 +606,74 @@ svg {
 
 .footer-socials-icon {
   color: var(--cloud);
+}
+
+.subscribe-container {
+}
+
+.subscribe-caption {
+  margin-bottom: 16px;
+
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subcribe-label {
+  display: flex;
+  margin-right: 24px;
+}
+
+.subscribe-imput {
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  background-color: var(--navy-blue);
+  border-radius: 4px;
+  border: 1px solid var(--white);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-imput::placeholder {
+  color: var(--white);
+}
+
+.subscribe-btn {
+  display: inline-flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  background-color: var(--iris);
+  border-radius: 4px;
+  border: transparent;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--green);
+}
+
+.subscribe-icon {
+  fill: currentColor;
 }
 
 .backdrop {
@@ -687,6 +763,7 @@ svg {
 }
 
 .modal-form {
+  flex-shrink: 0;
 }
 
 .modal-label {
@@ -710,7 +787,7 @@ svg {
   padding: 11px 38px;
   font-size: 12px;
   letter-spacing: 0.03em;
-  color: var(--navy-blue-modal);
+  color: var(--navy-blue);
   border-radius: 4px;
   border: 1px solid var(--navy-blue-modal);
   outline: transparent;
@@ -763,12 +840,31 @@ svg {
 }
 
 .modal-agreement-input {
+  appearance: none;
 }
 
 .modal-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--navy-blue-modal);
+  margin-right: 8px;
+}
+
+.modal-agreement-input:checked + .modal-checkbox {
+  background-color: var(--ocean);
 }
 
 .modal-checkbox-icon {
+  opacity: 0;
+}
+
+.modal-agreement-input:checked + .modal-checkbox > .modal-checkbox-icon {
+  opacity: 1;
+  fill: var(--cloud);
 }
 
 .modal-agreement-link {
@@ -784,4 +880,9 @@ svg {
   background-color: var(--iris);
   border: transparent;
   border-radius: 4px;
+}
+
+.modal-button-send:hover,
+.modal-button-send:focus {
+  background-color: var(--ocean);
 }

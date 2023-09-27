@@ -40,7 +40,7 @@
               >
             </li>
             <li class="header-list-item">
-              <a href="" class="header-list-link link">Contacts</a>
+              <a href="#" class="header-list-link link">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -490,10 +490,29 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe-container">
+          <p class="subscribe-caption">Subscribe</p>
+          <form class="subscribe-form">
+            <label class="subcribe-label">
+              <input
+                class="subscribe-imput"
+                type="email"
+                name="subscribe-imput"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="subscribe-btn">
+              Subscribe
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#subscribe"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" data-modal-close>
           <svg class="modal-btn-icon" width="8" height="8">
@@ -554,7 +573,6 @@
 
           <label class="modal-agreement">
             <input class="modal-agreement-input" type="checkbox" />
-
             <span class="modal-checkbox">
               <svg class="modal-checkbox-icon" width="10" height="10">
                 <use href="./images/icons.svg#check"></use>
@@ -563,7 +581,7 @@
             I accept the terms and conditions of the
             <a
               class="modal-agreement-link"
-              href=""
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
             >
