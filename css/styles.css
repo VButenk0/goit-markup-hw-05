@@ -634,11 +634,11 @@ svg {
 
 .subscribe-form {
   display: flex;
-  gap: 24px;
 }
 
 .subcribe-label {
   display: flex;
+  gap: 24px;
 }
 
 .subscribe-input {
