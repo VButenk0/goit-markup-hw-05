@@ -634,40 +634,41 @@ svg {
 
 .subscribe-form {
   display: flex;
+  gap: 24px;
 }
 
 .subcribe-label {
   display: flex;
-  margin-right: 24px;
 }
 
-.subscribe-imput {
+.subscribe-input {
   width: 264px;
   height: 40px;
-  padding: 8px 16px;
+  padding-left: 16px;
   font-size: 12px;
   font-weight: 400;
-  line-height: 2;
-  letter-spacing: 0.03em;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   color: var(--white);
-  background-color: var(--navy-blue);
+  background-color: transparent;
   border-radius: 4px;
   border: 1px solid var(--white);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.subscribe-imput::placeholder {
+.subscribe-input::placeholder {
   color: var(--white);
 }
 
 .subscribe-btn {
-  display: inline-flex;
-  padding: 8px 24px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  min-width: 165px;
+  height: 40px;
 
   color: var(--white);
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -675,7 +676,8 @@ svg {
 
   background-color: var(--iris);
   border-radius: 4px;
-  border: transparent;
+  border: none;
+  cursor: pointer;
 
   transition: background-color var(--trns-fast);
 }
@@ -687,6 +689,7 @@ svg {
 
 .subscribe-icon {
   fill: currentColor;
+  margin-left: 16px;
 }
 
 .backdrop {
@@ -765,7 +768,8 @@ svg {
 .modal-caption {
   display: block;
   width: 360px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+
   color: var(--navy-blue);
   text-align: center;
   font-size: 16px;
@@ -774,12 +778,12 @@ svg {
   letter-spacing: 0.02em;
 }
 
-.modal-caption-accent {
-  color: var(--accent-cl);
-}
-
 .modal-form {
   flex-shrink: 0;
+}
+
+.modal-container {
+  margin-bottom: 8px;
 }
 
 .modal-label {
@@ -788,22 +792,20 @@ svg {
   color: var(--light-slate);
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 
 .modal-field {
   position: relative;
-  margin-bottom: 8px;
 }
 
 .modal-input {
   width: 100%;
   height: 40px;
-  padding: 11px 38px;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-  color: var(--navy-blue);
+  padding-left: 38px;
+
+  background-color: transparent;
   border-radius: 4px;
   border: 1px solid var(--navy-blue-modal);
   outline: transparent;
@@ -811,8 +813,7 @@ svg {
   transition: border-color var(--trns-fast);
 }
 
-.modal-input:focus-within,
-.modal-coment-field:focus-within {
+.modal-input:focus-within {
   border-color: var(--iris);
 }
 
@@ -831,60 +832,74 @@ svg {
   fill: var(--iris);
 }
 
-.modal-coment {
+.modal-comment {
   margin-bottom: 16px;
 }
 
-.modal-coment-field {
+.modal-comment-field {
   display: block;
   width: 100%;
   height: 120px;
   padding: 8px 16px;
 
   font-size: 12px;
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--navy-blue-modal);
 
   border-radius: 4px;
   border: 1px solid var(--navy-blue-modal);
+  background-color: transparent;
   outline: transparent;
   resize: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-coment-field::placeholder {
+.modal-comment-field:focus-within {
+  border-color: var(--iris);
+}
+
+.modal-comment-field::placeholder {
   color: var(--navy-blue-modal);
 }
 
-.modal-agreement {
-  display: flex;
-  align-items: center;
+.modal-agreement-container {
   margin-bottom: 24px;
-
-  color: var(--light-slate);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
 }
 
 .modal-agreement-input {
-  appearance: none;
+}
+
+.modal-agreement {
+  display: block;
+
+  color: var(--light-slate);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 
 .modal-checkbox {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 16px;
   height: 16px;
+
   border-radius: 2px;
   border: 1px solid var(--navy-blue-modal);
-  margin-right: 8px;
+  fill: transparent;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-agreement-input:checked + .modal-checkbox {
   background-color: var(--ocean);
+  border: none;
+  fill: var(--cloud);
 }
 
 .modal-checkbox-icon {
@@ -897,18 +912,23 @@ svg {
 }
 
 .modal-agreement-link {
-  margin-left: 4px;
   color: var(--iris);
-  text-decoration: underline;
 }
 
 .modal-button-send {
-  margin-left: 119px;
-  padding: 16px 32px;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   color: var(--white);
   background-color: var(--iris);
-  border: transparent;
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
 
   transition: background-color var(--trns-fast);
 }
